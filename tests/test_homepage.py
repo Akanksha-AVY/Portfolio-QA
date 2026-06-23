@@ -275,9 +275,9 @@ def test_github_link_present(page: Page):
 
 
 def test_github_project_link_correct(page: Page):
-    """Portfolio QA project should link to the correct GitHub repo (Portfolio-QA)."""
+    """Featured project card should link to its GitHub repository."""
     page.goto(BASE_URL)
-    link = page.locator("a[href*='Portfolio-QA']")
+    link = page.locator(".project-card.featured a[href*='Portfolio-QA']")
     expect(link).to_have_count(1)
 
 
